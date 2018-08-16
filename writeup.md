@@ -104,9 +104,9 @@ To train the model, I used the following hyperparameters:
 The code for calculating the accuracy on the data sets is located in the 6th cell of the Ipython notebook.
 
 My final model results were:
-* training set accuracy of 0.992
-* validation set accuracy of 0.955 
-* test set accuracy of 0.942
+* training set accuracy of 0.989
+* validation set accuracy of 0.941 
+* test set accuracy of 0.927
 
 For this project, I started with the well known LeNet-5 architecture.  It is a simple and a compact neural network, but suitable for traffic sign classification because traffis signs are relatively easy to classify due to their unique and distinct shapes and patterns.  In order to avoid overfitting, I implemented dropout technique.  This model is definitely working well for this task since training, validation, and test accuracy all show good accuracy.  From testing, I found 150 epochs was just around right number because after 150, accuracy on validation dataset stopped improving, but continued improving on training dataset, which was a sign of overfitting. 
  
@@ -130,61 +130,61 @@ Here are the results of the prediction:
 |:---------------------:|:---------------------------------------------:| 
 | Children Crossing      		| Children Crossing   									| 
 | Yield     			| Yield 										|
-| Stop					| Road Work											|
+| Stop					| Stop											|
 | Road Work	      		| Road Work					 				|
 | Right-of-way At The Next Intersection			| Right-of-way At The Next Intersection     							|
  
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. Since the test dataset accuray is 94.2%, this 80% is far less.  However, since this is only based on 5 signs, it's hard to derive a conclusion.
+The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. Since the test dataset accuray is 92.7%, this 100% is a bit better.  However, since this is only based on 5 signs, it's hard to derive a conclusion.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
-For all images except the third one, the model quite sure of the predictions and they are all correct.  For the third image, the model is only 40% sure about its best prediction and is incorrect.  The second best prediction of 13% is actually the correct one.  
+For all images, the model is quite sure of the predictions and they are all correct.  For the third image, the model is slightly less confident with 84% prediction.
 
 ##### First Image (Children Crossing)
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 1.0 | Children Crossing | 
-| .0  | Dangerous curve to the right |
-| .0	 | Slippery road|
-| .0	 | Bicycles crossing |
-| .0	 | Beware of ice/snow	|
+| .0  | Right-of-way at the next intersection |
+| .0	 | Dangerous curve to the right|
+| .0	 | Beware of ice/snow |
+| .0	 | Bicycles crossing	|
 
 ##### Second Image (Yield)
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 1.0 | Yield | 
 | .0  | Priority road |
-| .0	 | No passing|
 | .0	 | Ahead only|
-| .0	 | No passing for vehicles over 3.5 metric tons	|
+| .0	 | No passing|
+| .0	 | No vehicles|
 
 ##### Third Image (Stop)
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .4 | Road work | 
-| .13  | Stop |
-| .11 | Keep right|
-| .04	 | Speed limit (80km/h)|
-| .04	 | Speed limit (60km/h)|
+| .84 | Stop | 
+| .05  | Turn right ahead |
+| .03 | Road work|
+| .03	 | Keep right|
+| .02	 | Speed limit (30km/h)|
 
 ##### Fourth Image (Road Work)
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 1.0 | Road work| 
-| .0  | Bicycles crossing|
-| .0	 | Bumpy road
+| .98 | Road work| 
+| .01  | Wild animals crossing|
+| .0	 | Double curve |
 | .0	 | Road narrows on the right |
 | .0	 | General caution	|
 
 ##### Fifth Image (Right-of-way At The Next Intersection)
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .97 | Right-of-way At The Next Intersection | 
-| .03  | Beware of ice/snow |
-| .0	 | Double curve|
+| .92 | Right-of-way At The Next Intersection | 
+| .07  | Beware of ice/snow |
+| .0	 | Children crossing|
 | .0	 | Slippery road |
-| .0	 | Children crossing	|
+| .0	 | Double curve|
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
