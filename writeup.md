@@ -22,6 +22,7 @@ The goals / steps of this project are the following:
 [image1]: ./writeup_imgs/bar_chart.png "Bar Chart"
 [image2]: ./writeup_imgs/orig_img.png "Original Imag"
 [image3]: ./writeup_imgs/processed_img.png "Processed Image"
+[image10]: ./writeup_imgs/learning_curve.png "Learning Curve"
 
 [image4]: ./new_signs_labeled/28.jpg "Road Work Sign"
 [image5]: ./new_signs_labeled/13.jpg "Right-of-way At the Next Intersection Sign"
@@ -107,8 +108,9 @@ My final model results were:
 * training set accuracy of 0.989
 * validation set accuracy of 0.941 
 * test set accuracy of 0.927
+![alt text][image10]
 
-For this project, I started with the well known LeNet-5 architecture.  It is a simple and a compact neural network, but suitable for traffic sign classification because traffis signs are relatively easy to classify due to their unique and distinct shapes and patterns.  In order to avoid overfitting, I implemented dropout technique.  This model is definitely working well for this task since training, validation, and test accuracy all show good accuracy.  From testing, I found 150 epochs was just around right number because after 150, accuracy on validation dataset stopped improving, but continued improving on training dataset, which was a sign of overfitting. 
+For this project, I started with the well known LeNet-5 architecture.  It is a simple and a compact neural network, but suitable for traffic sign classification because traffis signs are relatively easy to classify due to their unique and distinct shapes and patterns.  In order to avoid overfitting, I implemented dropout technique.  This model is definitely working well for this task since training, validation, and test accuracy all show good accuracy.  From testing, I found 150 epochs was just around right number because after 150, accuracy on validation dataset stopped improving, but continued improving on training dataset, which was a sign of overfitting.  The dropout of 50% is also used to avoid overfitting. 
  
 ### Test a Model on New Images
 
