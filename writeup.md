@@ -192,7 +192,7 @@ For all images, the model is quite sure of the predictions and they are all corr
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
-This is the feature map (1st activation layer) of the 1st image (Road Work).  The model is looking for edges in all directions.
+This is the feature map (1st activation layer) of the 1st image (Road Work).  The model is looking for edges in all directions and difference between the sign and the background.
 ![alt text][image9]
 
 
