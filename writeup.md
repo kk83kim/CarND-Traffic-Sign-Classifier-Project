@@ -116,8 +116,11 @@ For this project, I started with the well known LeNet-5 architecture.  It is a s
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text][image4] 
+![alt text][image5] 
+![alt text][image6] 
+![alt text][image7] 
+![alt text][image8]
 
 The above images are after cropping and rescaling the original images to match the input size (32 x 32) of the neural network.
 All images except the third one (stop sign) should be relatively easy to classify.  All those images have clear shape of the traffic signs and good contrast between the sign and the background.  The third image could be a little difficult since the sign almost takes the entire space of the image and it is angled as well.
@@ -189,7 +192,7 @@ For all images, the model is quite sure of the predictions and they are all corr
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
-This is the feature map (1st activation layer) of the 1st image (Road Work).  The model is looking for edge
+This is the feature map (1st activation layer) of the 1st image (Road Work).  The model is looking for edges in all directions.
 ![alt text][image9]
 
 
